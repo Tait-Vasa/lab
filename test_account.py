@@ -22,6 +22,9 @@ class Test:
 
         assert self.p1.deposit(0) is False
         assert self.p1.get_balance() == 30
+        
+        assert self.p1.deposit(7.50) is True
+        assert self.p1.get_balance() == approx(37.50, abs =0.001 )
 
     def test_withdraw(self):
         assert self.p1.withdraw(15) is False
@@ -41,3 +44,6 @@ class Test:
 
         assert self.p1.withdraw(0) is False
         assert self.p1.get_balance() == 15
+        
+        assert self.p1.withdraw(7.50) is True
+        assert self.p1.get_balance() == approx(7.50, abs = 0.001 )
