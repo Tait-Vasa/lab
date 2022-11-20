@@ -27,7 +27,7 @@ class Account:
         :param amount: this is amount selected to be taken out
         :return: returns if the function withdrew or not
         '''
-        if self.__account_balance > amount and amount > 0:
+        if self.__account_balance >= amount and amount > 0:
             self.__account_balance -= amount
             return True
 
